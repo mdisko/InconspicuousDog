@@ -51,3 +51,4 @@ script = ExtResource( 7 )
 
 [node name="Snow_Crunching" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+volume_db = -11.0
