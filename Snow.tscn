@@ -14,7 +14,6 @@
 [ext_resource path="res://Sounds/wolf howl.wav" type="AudioStream" id=12]
 [ext_resource path="res://Wolf_Howling.gd" type="Script" id=13]
 [ext_resource path="res://Scary_Music.gd" type="Script" id=14]
->>>>>>> fd10c68ebdb4a079848e49686d85ee717df5ac71
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
