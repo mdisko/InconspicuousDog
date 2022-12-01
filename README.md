@@ -20,7 +20,7 @@ Assets, or resources used
 ## Future Development
 
 # Created by: Inconspicuous Dogs
-## Anna - Pitch and assisting where needed
-## Meghan - Art and Main Branch
-## Justin - All purpose (mainly code) 
-## Herb - Sound (Music)
+    Anna - Pitch and assisting where needed
+    Meghan - Art and Main Branch
+    Justin - All purpose (mainly code) 
+    Herb - Sound (Music)
