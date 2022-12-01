@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 onready var SM = $SM
 export var move_speed = 20
+
 var direction = 0
 
 func _physics_process(_delta):

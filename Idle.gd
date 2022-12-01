@@ -9,6 +9,7 @@ func _ready():
 func start():
 	player.direction = 0
 	player.set_animation("Idle")
+	get_parent().get_parent().get_child(4).playing = false
 
 func physics_process(_delta):
 	if player.is_moving():

@@ -8,6 +8,7 @@ func _ready():
 
 func start():
 	player.set_animation("Walking")
+	get_parent().get_parent().get_child(4).playing = true
 
 func physics_process(delta):
 	if player.is_moving():
