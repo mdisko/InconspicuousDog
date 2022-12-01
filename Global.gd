@@ -12,7 +12,3 @@ var meat_got = false
 func _ready():
 	pass # Replace with function body.
 
-
-func _process(delta):
-	if oh_deer:
-		get_node("/root/Snow/oh_deer").visible = true
