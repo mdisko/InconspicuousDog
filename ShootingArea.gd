@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_ShootingArea_body_entered(body):
-	if "Deer" in body.name:
+	if "Deer" in body.name and not "Oh" in body.name:
 		Global.shooting = true
 
 

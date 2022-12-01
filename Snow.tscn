@@ -1,13 +1,14 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/TS1.png" type="Texture" id=2]
 [ext_resource path="res://assets/Eyes.png" type="Texture" id=3]
 [ext_resource path="res://Tree.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Snow.gd" type="Script" id=5]
 [ext_resource path="res://Deer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ShootingArea.gd" type="Script" id=7]
 [ext_resource path="res://ColorRect.gd" type="Script" id=8]
+[ext_resource path="res://Oh_Deer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Meat.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -762,7 +763,6 @@ color_ramp = SubResource( 30 )
 extents = Vector2( 512, 300 )
 
 [node name="Snow" type="Node2D"]
-script = ExtResource( 5 )
 
 [node name="Floor" type="TileMap" parent="."]
 scale = Vector2( 2, 2 )
@@ -4087,7 +4087,7 @@ position = Vector2( 183, 2545 )
 scale = Vector2( 2, 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3726, 855 )
+position = Vector2( 3198, 2836 )
 z_index = 2
 move_speed = 60
 
@@ -4156,7 +4156,25 @@ script = ExtResource( 8 )
 [node name="Tween" type="Tween" parent="Player/FlashHolder/ColorRect"]
 
 [node name="Deer" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3989, 837 )
+position = Vector2( 2991, 1745 )
+
+[node name="oh_deer" type="Node2D" parent="."]
+
+[node name="Blood" type="TileMap" parent="oh_deer"]
+scale = Vector2( 2, 2 )
+z_index = 1
+tile_set = SubResource( 11 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 3670109, 24, 0, 3866716, 26, 0, 3866717, 24, 0, 3997789, 24, 0, 4063325, 24, 0, 4128862, 26, 0, 4194397, 24, 0, 4325469, 24, 0, 4456541, 24, 0, 4587613, 24, 0, 4653148, 26, 0, 4653150, 26, 0, 4718685, 24, 0, 4784221, 26, 0, 4849757, 26, 0, 4915293, 24, 0, 5046364, 26, 0, 5046366, 26, 0, 5242973, 24, 0, 5374043, 26, 0, 5505117, 24, 0, 5636189, 26, 0, 5636190, 26, 0, 5701725, 24, 0, 5767261, 26, 0, 5832796, 26, 0, 5832799, 26, 0, 5832801, 26, 0, 5963866, 26, 0, 6029403, 26, 0, 6094943, 26, 0, 6094945, 26, 0, 6160475, 26, 0, 6226013, 26, 0 )
+
+[node name="Oh_Deer" parent="oh_deer" instance=ExtResource( 9 )]
+position = Vector2( 3001, 2943 )
+scale = Vector2( 0.1, 0.1 )
+z_index = 1000
+
+[node name="Meat" parent="." instance=ExtResource( 10 )]
+position = Vector2( 3149, 2862 )
 
 [connection signal="body_entered" from="Player/ShootingArea" to="Player/ShootingArea" method="_on_ShootingArea_body_entered"]
 [connection signal="body_exited" from="Player/ShootingArea" to="Player/ShootingArea" method="_on_ShootingArea_body_exited"]
