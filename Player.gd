@@ -40,3 +40,7 @@ func set_animation(anim):
 	if $AnimatedSprite.animation == anim: return
 	if $AnimatedSprite.frames.has_animation(anim): $AnimatedSprite.play(anim)
 	else: $AnimatedSprite.play()
+
+
+func _on_Exit_to_Cabin_body_entered(body):
+	pass # Replace with function body.
