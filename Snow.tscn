@@ -4176,5 +4176,21 @@ z_index = 1000
 [node name="Meat" parent="." instance=ExtResource( 10 )]
 position = Vector2( 3149, 2862 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_left = 3119.0
+margin_top = 2901.0
+margin_right = 3127.0
+margin_bottom = 2911.0
+rect_scale = Vector2( 50, 5 )
+color = Color( 0, 0, 0, 0.580392 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 3144.0
+margin_top = 2920.0
+margin_right = 3488.0
+margin_bottom = 2934.0
+text = "Use WASD to move and Left Mouse Button to interact"
+
 [connection signal="body_entered" from="Player/ShootingArea" to="Player/ShootingArea" method="_on_ShootingArea_body_entered"]
 [connection signal="body_exited" from="Player/ShootingArea" to="Player/ShootingArea" method="_on_ShootingArea_body_exited"]
