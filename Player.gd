@@ -17,6 +17,7 @@ func _physics_process(_delta):
 	if Input.is_action_pressed("Shoot") and Global.shooting:
 		Global.oh_deer = true
 		Global.shooting = false
+		$AudioStreamPlayer.play()
 		Global.oh_deer = true
 		get_node("FlashHolder/ColorRect").flash()
 		get_node("/root/Snow/Deer").queue_free()
