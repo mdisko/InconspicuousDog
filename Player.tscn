@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://StateMachine.gd" type="Script" id=1]
+[ext_resource path="res://Idle.gd" type="Script" id=2]
+[ext_resource path="res://Player.gd" type="Script" id=3]
+[ext_resource path="res://Walking.gd" type="Script" id=4]
+[ext_resource path="res://assets/invest3.png" type="Texture" id=5]
+[ext_resource path="res://assets/invest.png" type="Texture" id=6]
+[ext_resource path="res://PlayerCam.gd" type="Script" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Walking",
+"speed": 2.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 12, 16 )
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 34 )
+shape = SubResource( 2 )
+
+[node name="SM" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="Idle" type="Node" parent="SM"]
+script = ExtResource( 2 )
+
+[node name="Walking" type="Node" parent="SM"]
+script = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource( 7 )
