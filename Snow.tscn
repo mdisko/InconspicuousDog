@@ -4183,7 +4183,5 @@ z_index = 1000
 [node name="Meat" parent="." instance=ExtResource( 10 )]
 position = Vector2( 3149, 2862 )
 
-[node name="Tween" type="Tween" parent="."]
-
 [connection signal="body_entered" from="Player/ShootingArea" to="Player/ShootingArea" method="_on_ShootingArea_body_entered"]
 [connection signal="body_exited" from="Player/ShootingArea" to="Player/ShootingArea" method="_on_ShootingArea_body_exited"]
