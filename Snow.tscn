@@ -4092,7 +4092,7 @@ position = Vector2( 183, 2545 )
 scale = Vector2( 2, 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 436, 467 )
+position = Vector2( 530, 333 )
 z_index = 2
 move_speed = 60
 
@@ -4164,6 +4164,7 @@ script = ExtResource( 8 )
 position = Vector2( 2991, 1745 )
 
 [node name="oh_deer" type="Node2D" parent="."]
+visible = false
 
 [node name="Blood" type="TileMap" parent="oh_deer"]
 scale = Vector2( 2, 2 )
