@@ -12,8 +12,7 @@ var meat_got = false
 func _ready():
 	pass # Replace with function body.
 
-
-func _process(delta):
+func _physics_process(_delta):
 	if oh_deer:
 		var deer = get_node_or_null("/root/Snow/oh_deer")
 		if deer != null:
