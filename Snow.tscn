@@ -4092,7 +4092,7 @@ position = Vector2( 183, 2545 )
 scale = Vector2( 2, 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 459, 309 )
+position = Vector2( 3117, 1934 )
 z_index = 2
 move_speed = 60
 

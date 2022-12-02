@@ -15,4 +15,6 @@ func _ready():
 
 func _process(delta):
 	if oh_deer:
-		get_node("/root/Snow/oh_deer").visible = true
+		var deer = get_node_or_null("/root/Snow/oh_deer")
+		if deer != null:
+			deer.visible = true
